@@ -101,11 +101,11 @@ body {
 }
 
 #hero {
-  background-image: url(img/bg.jpg) no-repeat;
-  height: 90vh;
+  background-image: url(img/bg.jpg);
+  height: 100vh;
   width: 100%;
   background-size: cover;
-  background-position: top 25% right 0;
+  background-position: top 25% right -125px;
   padding: 0 80px;
   display: flex;
   align-items: flex-start;
@@ -129,6 +129,7 @@ body {
   background-repeat: no-repeat;
   cursor: pointer;
 }
+
 
 #features {
   display: flex;
@@ -157,25 +158,97 @@ body {
   line-height: 1;
   border-radius: 4px;
   color: #088178;
-  background-color: #fddde4;
+  background-color: #f6e1f4;
 }
 
-#features .fe-box h6:nth-child(2) {
+#features .fe-box:nth-child(2) h6 {
   background-color: #cdebbc;
 }
 
-#features .fe-box h6:nth-child(3) {
+#features .fe-box:nth-child(3) h6 {
   background-color: #d1e8f2;
 }
 
-#features .fe-box h6:nth-child(4) {
+#features .fe-box:nth-child(4) h6 {
   background-color: #cdd4f8;
 }
 
-#features .fe-box h6:nth-child(5) {
+#features .fe-box:nth-child(5) h6 {
   background-color: #f8dbf6;
 }
 
-#features .fe-box h6:nth-child(6) {
+#features .fe-box:nth-child(6) h6 {
   background-color: #fff2e5;
+}
+
+#product1 {
+  text-align: center;
+}
+
+#product1 .pro-container{
+display: flex;
+justify-content: space-between;
+padding: 20px;
+}
+
+#product1 .pro {
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #cce7d0;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.03);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+#product1 .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+
+}
+
+#product1 .pro img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+#product1 .pro .des {
+  text-align: start;
+  padding: 10px 0;
+}
+
+#product1 .pro .des span {
+  color: #606063;
+  font-size: 12px;
+}
+
+#product1 .pro .des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+}
+
+#product1 .pro .des i {
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+}
+
+#product1 .pro .des h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088178;
+}
+
+#product1 .pro .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
 }
