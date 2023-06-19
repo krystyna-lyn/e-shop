@@ -62,16 +62,16 @@ button.btn {
   transition: 0.2s;
 }
 
-button.btn:hover, button.white:hover {
+button.btn:hover, button.btn-banner:hover {
   background-color: #088178;
   color: #fff;
 }
 
-button.white{
+button.btn-banner{
   font-size: 13px;
   font-weight: 600;
   padding: 11px 18px;
-  color: #fff;
+  color: #088178;
   background-color: transparent;
   cursor: pointer;
   border: 1px solid #fff;
@@ -326,7 +326,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content:center;
-  background-image: url(img/pr1.jpg);
+  background-image: url(img/banner1.jpg);
   min-width: 580px;
   height: 50vh;
   background-size: cover;
@@ -335,22 +335,27 @@ body {
 
 }
 
+#sm-banner .banner-box2{
+  background-image: url(img/banner2.jpg);
+}
+
+
 #sm-banner h4{
-  color: #fff;
+  color: #1a1a1a;
   font-size: 20px;
   font-weight: 300;
 }
 
 #sm-banner h2{
-  color: #fff;
+  color: #088178;
   font-size: 28px;
   font-weight: 800;
 }
 
 #sm-banner span{
-  color: #fff;
+  color: #1a1a1a;
   font-size: 14px;
   font-weight: 500;
-  padding: 15px;
+  padding: 15px 0;
 }
 
