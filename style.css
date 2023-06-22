@@ -534,6 +534,10 @@ footer .copyright {
 
 @media (max-width: 799px) {
 
+  .section-p1 {
+    padding: 80px 40px;
+  }
+
   #navbar {
     display: flex;
     flex-direction: column;
@@ -567,7 +571,7 @@ footer .copyright {
   #mobile i {
     color: #1a1a1a;
     font-size: 24px;
-    margin-left: 10px;
+    margin-left: 20px;
   }
 
   #close {
@@ -583,4 +587,46 @@ footer .copyright {
     display: none;
   }
 
+  #hero {
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+  }
+
+  #features {
+    justify-content: center;
+  }
+
+  #features .fe-box {
+    margin: 15px 15px;
+  }
+
+  #product1 .pro-container {
+    justify-content: center;
+  }
+
+  #product1 .pro {
+    margin: 15px;
+  }
+
+  #banner {
+    height: 20vh;
+  }
+
+  #sm-banner .banner-box {
+    min-width: 100%;
+    height: 30vh;
+  }
+
+  #banner3 {
+    padding: 0 40px;
+  }
+
+  #banner3 .banner-box {
+    width: 28%;
+  }
+
+  #newsletter .form {
+    width: 70%;
+  }
 }
