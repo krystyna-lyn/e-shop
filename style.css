@@ -706,6 +706,7 @@ h2 {
 }
 
 /* About page */
+
 #about-head img {
   width: 50%;
   height: auto;
@@ -740,7 +741,48 @@ h2 {
   border-radius: 20px;
 }
 
+/* Contact page */
 
+#contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#contact .details {
+  width: 40%;
+}
+
+#contact .details span {
+  font-size: 12px;
+}
+
+#contact .details h2 {
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+
+#contact .details h3 {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+#contact .details li {
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+
+#contact .details li i {
+  font-size: 14px;
+  padding-right: 22px;
+}
+
+#contact .details li p {
+  margin: 0;
+  font-size: 14px;
+}
 
 
 
