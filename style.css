@@ -163,11 +163,10 @@ body {
 }
 
 #hero button {
-  background-image: url();
   background-color: transparent;
   color: #088178;
   padding: 14px 80px 14px 65px;
-  background-repeat: no-repeat;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -923,7 +922,56 @@ h2 {
   font-size: 13px;
 }
 
+#cart-add {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+#coupon {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+#coupon h3,
+#subtotal h3 {
+  margin-bottom: 15px;
+}
+
+#coupon input {
+  padding: 10px 20px;
+  outline: none;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid #e1e1e1;
+}
+
+#coupon button,
+#subtotal button {
+  background-color: #088178;
+  color: #fff;
+  padding: 12px 20px;
+}
+
+#subtotal {
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid #e1e1e1;
+  padding: 30px;
+}
+
+#subtotal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#subtotal table td {
+  width: 50%;
+  border: 1px solid #e1e1e1;
+  padding: 10px;
+  font-size: 13px;
+}
 
 
 
