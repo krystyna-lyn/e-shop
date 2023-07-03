@@ -164,10 +164,14 @@ body {
 
 #hero button {
   background-color: transparent;
-  color: #088178;
   padding: 14px 80px 14px 65px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+#hero button a{
+  color: #088178;
+  text-decoration: none;
 }
 
 
@@ -532,7 +536,7 @@ footer .copyright {
 /* Shop Page */
 
 #page-header {
-  background-image: url('img/banner5.jpg');
+  background-image: url('img/bg1.png');
   width: 100%;
   height: 40vh;
   background-size: cover;
@@ -979,6 +983,12 @@ h2 {
 
 /* Media queries */
 
+@media (max-width: 1051px) {
+  #cart {
+    overflow-x: auto;
+   }
+}
+
 @media (max-width: 799px) {
 
   .section-p1 {
@@ -995,7 +1005,7 @@ h2 {
     right: -300px;
     height: 100vh;
     width: 300px;
-    background-color: #e3e6f3;
+    background-color: #e1e1e1;
     box-sizing: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     transition: 0.3s;
@@ -1093,20 +1103,9 @@ h2 {
 
   /* Cart Page */
 
-  #cart table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    white-space: nowrap;
-  }
-
-  #cart img {
-    width: 70%;
-  }
-
-
-
-
+ #cart {
+  overflow-x: auto;
+ }
 
 
 }
@@ -1132,6 +1131,10 @@ h2 {
   #hero {
     padding: 0 20px;
     background-position: 55%;
+  }
+
+  #page-header{
+    height: 15vh;
   }
 
   #features {
@@ -1261,6 +1264,16 @@ h2 {
   #form form {
     width: 100%;
     margin-bottom: 30px;
+  }
+
+  /* Cart Page */
+
+  #cart-add {
+    flex-direction: column;
+  }
+
+  #coupon, #subtotal{
+    width: 100%;
   }
 
 }
