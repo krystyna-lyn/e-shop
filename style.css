@@ -27,7 +27,7 @@ h2 {
 
 h4 {
   font-size: 20px;
-  color: #222;
+  color: #fff;
 }
 
 h6 {
@@ -137,7 +137,7 @@ body {
   align-items: center;
 }
 
-#close {
+#close{
   display: none;
 }
 
@@ -1031,7 +1031,7 @@ h2 {
     margin-left: 20px;
   }
 
-  #close {
+  #close{
     display: initial;
     position: absolute;
     top: 30px;
