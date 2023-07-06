@@ -137,7 +137,7 @@ body {
   align-items: center;
 }
 
-#close{
+#close {
   display: none;
 }
 
@@ -169,7 +169,7 @@ body {
   cursor: pointer;
 }
 
-#hero button a{
+#hero button a {
   color: #088178;
   text-decoration: none;
 }
@@ -527,6 +527,11 @@ footer a:hover {
   color: #088178;
 }
 
+footer .pay_icons{
+  font-size: 50px;
+  color: #088178;
+}
+
 footer .copyright {
   width: 100%;
   text-align: center;
@@ -874,6 +879,12 @@ h2 {
   width: 70px;
 }
 
+#cart table button {
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+}
+
 #cart table td:nth-child(1) {
   width: 100px;
   text-align: center;
@@ -986,7 +997,7 @@ h2 {
 @media (max-width: 1051px) {
   #cart {
     overflow-x: auto;
-   }
+  }
 }
 
 @media (max-width: 799px) {
@@ -1031,7 +1042,7 @@ h2 {
     margin-left: 20px;
   }
 
-  #close{
+  #close {
     display: initial;
     position: absolute;
     top: 30px;
@@ -1103,9 +1114,9 @@ h2 {
 
   /* Cart Page */
 
- #cart {
-  overflow-x: auto;
- }
+  #cart {
+    overflow-x: auto;
+  }
 
 
 }
@@ -1133,7 +1144,7 @@ h2 {
     background-position: 55%;
   }
 
-  #page-header{
+  #page-header {
     height: 15vh;
   }
 
@@ -1272,7 +1283,8 @@ h2 {
     flex-direction: column;
   }
 
-  #coupon, #subtotal{
+  #coupon,
+  #subtotal {
     width: 100%;
   }
 
