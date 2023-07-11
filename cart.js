@@ -4,9 +4,9 @@ const parentElement = document.querySelector('#product');
 const cartSumPrice = document.querySelector('#sum');
 const products = document.querySelectorAll('.pro');
 
-const countSumPrice = function (){
+const countSumPrice = function () {
     let sumPrice = 0;
-    productsInCart.forEach(product =>{
+    productsInCart.forEach(product => {
         sumPrice += product.price;
     });
     return sumPrice;
@@ -33,7 +33,7 @@ const updateShoppingCartHTML = function () {
             `;
         })
         //parentElement.innerHTML = result.join('');
-       //document.querySelector('.table').classList.remove('hidden');
+        //document.querySelector('.table').classList.remove('hidden');
         cartSumPrice.innerHTML = "€" + countSumPrice();
     }
     else {
