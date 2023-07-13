@@ -24,9 +24,49 @@
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="cart.html" id="bag"
-              ><i class="far fa-shopping-bag"><span id="sum"></span></i
-            ></a>
+            <!--Shopping cart-->
+            <div class="shopping-cart">
+                <div class="sum-prices">
+                    <!--Shopping cart logo-->
+                    <i
+                        class="fas fa-shopping-cart shoppingCartButton"
+                    ></i>
+                    <!--The total prices of products in the shopping cart -->
+                    <h6 id="sum-prices"></h6>
+                </div>
+            </div>
+
+            <div class="producstOnCart hide">
+              <div class="overlay"></div>
+              <div class="top">
+                  <button id="closeButton">
+                      <i class="fas fa-times-circle"></i>
+                  </button>
+                  <h3>Cart</h3>
+              </div>
+              <ul id="buyItems">
+                  <h4 class="empty">Your shopping cart is empty</h4>
+                  <!-- <li class="buyItem">
+          <img src="Images/producs-images/Mobiles/galaxynote10.png">
+          <div>
+            <h5>Products Name</h5>
+            <h6>$199</h6>
+            <div>
+              <button>-</button>
+              <span class="countOfProduct">1</span>
+              <button>+</button>
+              </div>
+                    </div>
+                  </li> -->
+                </ul>
+                <button class="btn checkout hidden">Check out</button>
+            </div>
+  
+            <!--
+              <a href="cart.html" id="bag">
+              <i class="far fa-shopping-bag"><span id="sum"></span></i>
+            </a> 
+            -->
           </li>
           <a href="#" id="close"><i class="far fa-times"></i></a>
         </ul>
@@ -36,6 +76,9 @@
         <i id="bar" class="fas fa-outdent"></i>
       </div>
     </section>
+
+   
+
 
     <section id="hero">
       <h4>Trade-in-offer</h4>
@@ -335,7 +378,7 @@
           <i class="fab fa-cc-mastercard"></i>
           <i class="fab fa-cc-paypal"></i>
           <i class="fab fa-cc-visa"></i>
-      </p>
+        </p>
       </div>
 
       <div class="copyright">
