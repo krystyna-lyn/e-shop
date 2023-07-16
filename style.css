@@ -293,6 +293,18 @@ body {
   padding: 0 20px;
 }
 
+.producstOnCart .empty {
+  justify-self: center;
+  margin: 150px auto;
+}
+
+.price {
+  color: #dd3333;
+  margin-top: 10px;
+  text-align: left;
+  padding: 5px;
+  font-size: 1rem;
+}
 
 
 
