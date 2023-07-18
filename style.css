@@ -1470,4 +1470,21 @@ h2 {
     width: 100%;
   }
 
+  /* cart */
+
+  .producstOnCart {
+    font-size: 0.8rem;
+}
+
+.pop-mobiles-1 {
+    width: 100%;
+    font-size: 0.9rem;
+    height: 300px;
+    margin: 0;
+}
+
+.pop-mobiles-1 .btn {
+    opacity: 0.9;
+}
+
 }
