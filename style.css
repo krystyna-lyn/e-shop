@@ -1487,4 +1487,18 @@ h2 {
     opacity: 0.9;
 }
 
+.pop-mobiles-1 > div {
+  top: 0%;
+}
+
+.pop-mobiles-1 h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+.pop-mobiles-2 {
+  width: 55%;
+  margin-left: 1%;
+}
+
 }
