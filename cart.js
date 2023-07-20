@@ -4,9 +4,9 @@ if(!productsInCart){
 	productsInCart = [];
 }
 
-const parentElement = document.querySelector('.pro-container');
-const cartSumPrice = document.querySelector('.sum-prices');
-const products = document.querySelectorAll('.pro');
+const parentElement = document.querySelector('#buyItems');
+const cartSumPrice = document.querySelector('#sum-prices');
+const products = document.querySelectorAll('.pro-container');
 
 const countSumPrice = function () {
     let sumPrice = 0;
@@ -35,6 +35,7 @@ const updateShoppingCartHTML = function () {
         </li>
         `;
         })
+        
         parentElement.innerHTML = result.join('');
 		document.querySelector('.checkout').classList.remove('hidden');
 		cartSumPrice.innerHTML = '€' + countTheSumPrice();
@@ -66,7 +67,7 @@ products.forEach(item => {   // 1
 		if (e.target.classList.contains('cart')) {
 			const productID = e.target.dataset.productId;
 			const productName = item.querySelector('.productName').innerHTML;
-            console.log(productName)
+           
 			const productPrice = item.querySelector('.priceValue').innerHTML;
 			const productImage = item.querySelector('img').src;
 			let product = {
