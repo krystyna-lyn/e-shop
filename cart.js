@@ -6,9 +6,10 @@ if(!productsInCart){
 
 const parentElement = document.querySelector('#buyItems');
 const cartSumPrice = document.querySelector('#sum-prices');
+console.log(cartSumPrice)
 const products = document.querySelectorAll('.pro-container');
 
-const countSumPrice = function () {
+const countTheSumPrice = function () {
     let sumPrice = 0;
     productsInCart.forEach(product => {
         sumPrice += product.price;
@@ -63,13 +64,16 @@ function updateProductsInCart(product) {
 
 products.forEach(item => {   // 1
 	item.addEventListener('click', (e) => {
-        console.log(item)
+        
 		if (e.target.classList.contains('cart')) {
 			const productID = e.target.dataset.productId;
+            console.log(productID)
 			const productName = item.querySelector('.productName').innerHTML;
-           
+            console.log(productName)
 			const productPrice = item.querySelector('.priceValue').innerHTML;
-			const productImage = item.querySelector('img').src;
+			
+            const productImage = item.querySelector('img').src;
+            console.log(productImage)
 			let product = {
 				name: productName,
 				image: productImage,

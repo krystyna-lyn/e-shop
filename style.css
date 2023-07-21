@@ -226,7 +226,7 @@ body {
 
 .producstOnCart .top {
   display: flex;
-  background-color: #616161;
+  background-color: #088178;
   text-align: center;
   padding: 10px 0;
   position: sticky;
@@ -239,12 +239,12 @@ body {
   border: none;
   font-size: 1.5rem;
   margin-left: 10px;
-  color: #c24c37;
+  color: #e8f6ea;
   cursor: pointer;
 }
 
 .top button:hover {
-  color: #e40505;
+  color: #000;
 }
 
 .top h3 {
@@ -255,15 +255,6 @@ body {
   margin: 0 auto;
 }
 
-.producstOnCart > .checkout {
-  font-size: 0.9rem;
-  margin: 20px auto;
-  border: none;
-  background-color: #297075;
-  padding: 10px 20px;
-  color: #eee;
-  cursor: pointer;
-}
 
 .overlay {
   overflow: hidden;
@@ -307,7 +298,7 @@ body {
 
 .producstOnCart .empty {
   justify-self: center;
-  margin: 150px auto;
+  text-align: center;
 }
 
 .price {
