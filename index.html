@@ -24,45 +24,42 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-            <!--Shopping cart-->
-            <div class="shopping-cart">
-              <div class="sum-prices">
-                  <!--Shopping cart logo-->
-                  <i
-                      class="fas fa-shopping-cart shoppingCartButton"
-                  ></i>
-                  <!--The total prices of products in the shopping cart -->
-                  <h6 id="sum-prices"></h6>
-              </div>
+          <!--Shopping cart-->
+          <div class="shopping-cart">
+            <div class="sum-prices">
+              <!--Shopping cart logo-->
+              <i class="fas fa-shopping-cart shoppingCartButton"></i>
+              <!--The total prices of products in the shopping cart -->
+              <h6 id="sum-prices"></h6>
+            </div>
           </div>
 
           <div class="producstOnCart hide">
             <div class="overlay"></div>
             <div class="top">
-                <button id="closeButton">
-                    <i class="fas fa-times-circle"></i>
-                </button>
-                <h3>Cart</h3>
+              <button id="closeButton">
+                <i class="fas fa-times-circle"></i>
+              </button>
+              <h3>Cart</h3>
             </div>
             <ul id="buyItems">
-                <h4 class="empty">Your shopping cart is empty</h4>
-                <!-- <li class="buyItem">
-        <img src="Images/producs-images/Mobiles/galaxynote10.png">
-        <div>
-          <h5>Products Name</h5>
-          <h6>$199</h6>
-          <div>
-            <button>-</button>
-            <span class="countOfProduct">1</span>
-            <button>+</button>
-          </div>
-        </div>
-      </li> -->
+              <h4 class="empty">Your shopping cart is empty</h4>
+              <!-- <li class="buyItem">
+                      <img src="#">
+                      <div>
+                        <h5>Products Name</h5>
+                        <h6>$199</h6>
+                        <div>
+                          <button>-</button>
+                          <span class="countOfProduct">1</span>
+                          <button>+</button>
+                        </div>
+                      </div>
+                    </li> -->
             </ul>
-            <button class="btn hidden">Check out</button>
-        </div>
+            <button class="btn checkout hidden">Check out</button>
+          </div>
 
-          
           <a href="#" id="close"><i class="far fa-times"></i></a>
         </ul>
       </div>
@@ -71,9 +68,6 @@
         <i id="bar" class="fas fa-outdent"></i>
       </div>
     </section>
-
-   
-
 
     <section id="hero">
       <h4>Trade-in-offer</h4>
@@ -129,7 +123,7 @@
 
           <div class="des">
             <span>Vogue</span>
-            <h5 class="productName">T-Shirt</h5>
+            <h5 class="productName">T-Shirt 1</h5>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -139,13 +133,17 @@
             </div>
             <h4>€<span class="priceValue">100</span></h4>
           </div>
-          <i class="fas fa-shopping-cart cart" data-product-id="1"></i>
+          <i
+            class="fas fa-shopping-cart cart addToCart"
+            data-product-id="1"
+          ></i>
         </div>
         <div class="pro">
           <img src="img/pr2.jpg" alt="product" />
 
           <div class="des">
             <span>Adidas</span>
+
             <h5 class="productName">T-Shirt 2</h5>
             <div class="star">
               <i class="fas fa-star"></i>
@@ -156,14 +154,17 @@
             </div>
             <h4>€<span class="priceValue">100</span></h4>
           </div>
-          <i class="fas fa-shopping-cart cart" data-product-id="2"></i>
+          <i
+            class="fas fa-shopping-cart cart addToCart"
+            data-product-id="3"
+          ></i>
         </div>
         <div class="pro">
           <img src="img/pr3.jpg" alt="product" />
 
           <div class="des">
             <span>Adidas</span>
-            <h5 class="productName">T-Shirt</h5>
+            <h5 class="productName">T-Shirt 3</h5>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -173,14 +174,17 @@
             </div>
             <h4>€<span class="priceValue">200</span></h4>
           </div>
-          <i class="fas fa-shopping-cart cart" data-product-id="3"></i>
+          <i
+            class="fas fa-shopping-cart cart addToCart"
+            data-product-id="3"
+          ></i>
         </div>
         <div class="pro">
           <img src="img/pr4.jpg" alt="product" />
 
           <div class="des">
-            <span>Adidas</span>
-            <h5 class="productName">T-Shirt</h5>
+            <span>Adidas 4</span>
+            <h5 class="productName">T-Shirt 4</h5>
             <div class="star">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -190,7 +194,10 @@
             </div>
             <h4>€<span class="priceValue">89</span></h4>
           </div>
-          <i class="fas fa-shopping-cart cart" data-product-id="4"></i>
+          <i
+            class="fas fa-shopping-cart cart addToCart"
+            data-product-id="4"
+          ></i>
         </div>
       </div>
     </section>
@@ -383,6 +390,5 @@
 
     <script src="JS/shop-cart.js"></script>
     <script src="cart.js"></script>
-   
   </body>
 </html>
