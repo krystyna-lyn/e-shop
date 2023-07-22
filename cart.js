@@ -34,11 +34,14 @@ const updateShoppingCartHTML = function () {
                     </div>
                 </div>
             </li>`
-        })
+}
+       )
+        
 
         parentElement.innerHTML = result.join('');
         document.querySelector('.checkout').classList.remove('hidden');
         cartSumPrice.innerHTML = '€' + countTheSumPrice();
+      
     }
     else {
         document.querySelector('.checkout').classList.add('hidden');
@@ -105,3 +108,5 @@ parentElement.addEventListener('click', (e) => { // Last
         updateShoppingCartHTML();
     }
 });
+
+updateShoppingCartHTML();

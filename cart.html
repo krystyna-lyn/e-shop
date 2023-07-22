@@ -14,7 +14,7 @@
   </head>
   <body>
     <section id="header">
-      <a href=""><img src="img/logo.png" class="logo" alt="" /></a>
+      <a href=""><img src="#" class="logo" alt="" /></a>
 
       <div>
         <ul id="navbar">
@@ -46,7 +46,6 @@
       <table width="100%" class="table">
         <thead>
           <tr>
-            <td>Remove</td>
             <td>Image</td>
             <td>Product</td>
             <td>Price</td>
@@ -56,16 +55,26 @@
         </thead>
         <tbody>
           <tr>
-            <td><a href="#" class="far fa-times-circle"></a></td>
-            <td><img src="img/pr1.jpg" alt="" /></td>
-            <td>Basic white T-Shirt</td>
-            <td>€76.99</td>
+            <!--
+              <td><a href="#" class="far fa-times-circle"></a></td>
+            <td><img src="<script>product.name</script>" alt="" /></td>
+            <td><script>product.name</script></td>
+            <td><script>product.price</script></td>
             <td>
               <button class="btn-minus" data-id="0">-</button>
               <span class="countOfProduct">1</span>
               <button class="btn-minus" data-id="1">+</button>
             </td>
             <td>€76.99</td>
+          -->
+<td>
+  <ul id="buyItems" class="itemsCart">
+    <h4 class="empty">Your shopping cart is empty</h4>
+   
+  </ul>
+
+</td>
+          
           </tr>
          
         </tbody>

@@ -38,6 +38,7 @@
     <section id="product-details" class="section-p1">
       <div class="single-img">
         <img src="img/pr1.jpg" width="100%" id="mainImg" />
+
         <div class="img-group">
           <div class="img-col">
             <img src="img/pr1.jpg" alt="" width="100%" class="small-img" />
@@ -219,6 +220,22 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      const mainImg = document.getElementById('mainImg');
+      const smallImg = document.getElementsByClassName('small-img');
+
+      smallImg[0].onclick = function () {
+          mainImg.src = smallImg[0].src;
+      }
+      smallImg[1].onclick = function () {
+          mainImg.src = smallImg[1].src;
+      }
+      smallImg[2].onclick = function () {
+          mainImg.src = smallImg[2].src;
+      }
+      smallImg[3].onclick = function () {
+          mainImg.src = smallImg[3].src;
+      }
+    </script>
   </body>
 </html>
