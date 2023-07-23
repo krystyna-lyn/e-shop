@@ -7,7 +7,7 @@ if (!productsInCart) {
 const parentElement = document.querySelector('#buyItems');
 const cartSumPrice = document.querySelector('#sum-prices');
 
-const products = document.querySelectorAll('.pro-container');
+const products = document.querySelectorAll('.pro');
 
 const countTheSumPrice = function () {
     let sumPrice = 0;
@@ -34,14 +34,14 @@ const updateShoppingCartHTML = function () {
                     </div>
                 </div>
             </li>`
-}
-       )
-        
+        }
+
+        )
 
         parentElement.innerHTML = result.join('');
         document.querySelector('.checkout').classList.remove('hidden');
         cartSumPrice.innerHTML = '€' + countTheSumPrice();
-      
+
     }
     else {
         document.querySelector('.checkout').classList.add('hidden');
@@ -103,6 +103,7 @@ parentElement.addEventListener('click', (e) => { // Last
             }
             if (productsInCart[i].count <= 0) {
                 productsInCart.splice(i, 1);
+                window.location.href
             }
         }
         updateShoppingCartHTML();

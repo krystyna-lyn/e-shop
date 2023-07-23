@@ -1,6 +1,5 @@
 
 const closeShopCart = document.querySelector('#closeButton');
-console.log(closeShopCart)
 
 const overlay = document.querySelector('.overlay');
 closeShopCart.addEventListener('click', closeCart);
