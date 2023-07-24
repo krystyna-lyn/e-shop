@@ -51,8 +51,6 @@ const updateShoppingCartHTML = function () {
     }
 }
 
-
-
 function updateProductsInCart(product) {
     for (let i = 0; i < productsInCart.length; i++) {
         if (productsInCart[i].id == product.id) {

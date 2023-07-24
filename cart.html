@@ -53,17 +53,14 @@
             <td>Subtotal</td>
           </tr>
         </thead>
-        <tbody>
-          <tr id="products">
-             
-            <!--
+        <tbody id="products">
+          <!--
             here is js code / products
             -->
-          
-          </tr>
-         
         </tbody>
       </table>
+
+      <button class="btn deleteAll hidden">Delete All</button>
     </section>
 
     <section id="cart-add" class="section-p1">
@@ -158,32 +155,30 @@
     </footer>
 
     <script>
+      const parentElement = document.querySelector("#products");
+      const cartSumPrice = document.querySelectorAll(".totalPrice");
+      const deleteAll = document.querySelector(".deleteAll");
 
-    const parentElement = document.querySelector('#products');
-    const cartSumPrice = document.querySelectorAll('.totalPrice');
-
-
-
-    const countTheSumPrice = function () {
+      const countTheSumPrice = function () {
         let sumPrice = 0;
-        productsInCart.forEach(product => {
-            sumPrice += product.price;
+        productsInCart.forEach((product) => {
+          sumPrice += product.price;
         });
         return sumPrice;
-    }
+      };
 
+      let productsInCart = JSON.parse(localStorage.getItem("shoppingCart"));
 
-          let productsInCart = JSON.parse(localStorage.getItem('shoppingCart'));
-            if (!productsInCart) {
-                productsInCart = [];
-            }
-      
+      if (!productsInCart) {
+        productsInCart = [];
+      }
 
-    const updateShoppingCartHTML = function () {
-        localStorage.setItem('shoppingCart', JSON.stringify(productsInCart));
+      const updateShoppingCartHTML = function () {
+        localStorage.setItem("shoppingCart", JSON.stringify(productsInCart));
         if (productsInCart.length > 0) {
-            let result = productsInCart.map(product => {
-                return `
+          let result = productsInCart.map((product) => {
+            return `
+                <tr>
                 <td><img src="${product.image}" alt=""/></td>
                 <td>${product.name}</td>
                 <td>${product.basePrice}</td>
@@ -192,49 +187,58 @@
                   <span class="countOfProduct">${product.count}</span>
                   <button class="button-plus" data-id="${product.id}">+</button>
                 </td>
-                <td>${product.price}</td>`
-                
-    }
-            )
+                <td>${product.price}</td>
+                </tr>`;
+          });
 
-            parentElement.innerHTML = result.join('');
-          
-            cartSumPrice.forEach(product => {
-            product.innerHTML = '€' + countTheSumPrice();
-            });
+          parentElement.innerHTML = result.join("");
 
-
+          cartSumPrice.forEach((product) => {
+            product.innerHTML = "€" + countTheSumPrice();
+          });
         }
-      
-    }
-    
+      };
 
-    parentElement.addEventListener('click', (e) => { 
-    const isPlusButton = e.target.classList.contains('button-plus');
-    const isMinusButton = e.target.classList.contains('button-minus');
-    console.log(isPlusButton)
-    if (isPlusButton || isMinusButton) {
-        for (let i = 0; i < productsInCart.length; i++) {
+      parentElement.addEventListener("click", (e) => {
+        const isPlusButton = e.target.classList.contains("button-plus");
+        const isMinusButton = e.target.classList.contains("button-minus");
+        console.log(isPlusButton);
+        if (isPlusButton || isMinusButton) {
+          for (let i = 0; i < productsInCart.length; i++) {
             if (productsInCart[i].id == e.target.dataset.id) {
-                if (isPlusButton) {
-                    productsInCart[i].count += 1
-                }
-                else if (isMinusButton) {
-                    productsInCart[i].count -= 1
-                }
-                productsInCart[i].price = productsInCart[i].basePrice * productsInCart[i].count;
-
+              if (isPlusButton) {
+                productsInCart[i].count += 1;
+              } else if (isMinusButton) {
+                productsInCart[i].count -= 1;
+              }
+              productsInCart[i].price =
+                productsInCart[i].basePrice * productsInCart[i].count;
             }
             if (productsInCart[i].count <= 0) {
-                productsInCart.splice(i, 1);
+              productsInCart.splice(i, 1);
             }
+          }
+          updateShoppingCartHTML();
         }
-        updateShoppingCartHTML();
-    }
-});
+      });
+      deleteAll.classList.remove("hidden");
+      deleteAll.addEventListener("click", () => {
 
-updateShoppingCartHTML();
+          //emove all product items from the cart, html structure
+          //while (parentElement.firstChild) {
+          //parentElement.removeChild(parentElement.firstChild);
+          //}
 
+          localStorage.removeItem("shoppingCart");
+
+          window.location.href = "index.html";
+
+      });
+
+    
+     
+
+      updateShoppingCartHTML();
     </script>
-</body>
+  </body>
 </html>
