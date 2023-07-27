@@ -223,20 +223,15 @@
       });
       deleteAll.classList.remove("hidden");
       deleteAll.addEventListener("click", () => {
+        //remove all product items from the cart, html structure
+        //while (parentElement.firstChild) {
+        //parentElement.removeChild(parentElement.firstChild);
+        //}
 
-          //emove all product items from the cart, html structure
-          //while (parentElement.firstChild) {
-          //parentElement.removeChild(parentElement.firstChild);
-          //}
+        localStorage.removeItem("shoppingCart");
 
-          localStorage.removeItem("shoppingCart");
-
-          window.location.href = "index.html";
-
+        window.location.href = "index.html";
       });
-
-    
-     
 
       updateShoppingCartHTML();
     </script>
