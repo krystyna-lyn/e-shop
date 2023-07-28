@@ -140,6 +140,10 @@ body {
 
 /*shopping-cart*/
 
+.shopping-cart {
+  margin-left: 25px;
+}
+
 .shopping-cart .sum-prices {
   display: flex;
   flex-direction: row;
