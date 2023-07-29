@@ -1,4 +1,4 @@
-
+// close, open shoppingcart 
 const closeShopCart = document.querySelector('#closeButton');
 
 const overlay = document.querySelector('.overlay');
@@ -37,5 +37,4 @@ if (close) {
         nav.classList.remove('active');
     })
 }
-
 
