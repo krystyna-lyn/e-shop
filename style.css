@@ -27,7 +27,7 @@ h2 {
 
 h4 {
   font-size: 20px;
-  color: #fff;
+  color: #222;
 }
 
 h6 {
@@ -99,10 +99,10 @@ body {
 
 .logo {
   position: absolute;
-  top: 10px;
+  top: 15px;
   left: 20px;
-  width: 80px;
-  height: 45px;
+  width: 100px;
+  height: 25px;
 }
 
 #navbar {
@@ -191,7 +191,7 @@ body {
   color: #f0f0f0;
   z-index: 15;
   position: fixed;
-  top: 20px;
+  top: 60px;
   right: 0;
   text-align: center;
   animation: fade 1s;
@@ -656,7 +656,7 @@ body {
 }
 
 #sm-banner .banner-box2 {
-  background-image: url(img/banner3.jpg);
+  background-image: url(img/banner2.jpg);
 }
 
 
@@ -674,8 +674,8 @@ body {
 
 #sm-banner span {
   color: #1a1a1a;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   padding: 15px 0;
 }
 
@@ -691,7 +691,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  background-image: url(img/banner2.jpg);
+  background-image: url(img/banner3.jpg);
   min-width: 30%;
   height: 30vh;
   background-size: cover;
@@ -939,7 +939,7 @@ h2 {
   background-image: url(img/banner3.jpg);
 }
 
-#page-header.blog-header p {
+#page-header.blog-header p,.blog-header h4 {
   color: #000;
 }
 

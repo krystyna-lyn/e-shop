@@ -2,7 +2,7 @@
 
 document.getElementById("header").innerHTML =
 	`
-    <a href=""><img src="img/logo.png" class="logo" alt="" /></a>
+    <a href="index.html"><img src="img/logo.png" class="logo" alt=logo"" /></a>
 
     <div>
       <ul id="navbar">
