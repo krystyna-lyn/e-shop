@@ -2,15 +2,15 @@
 
 document.getElementById("header").innerHTML =
 	`
-    <a href=""><img src="#" class="logo" alt="" /></a>
+    <a href=""><img src="img/logo.png" class="logo" alt="" /></a>
 
     <div>
       <ul id="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html" class="link">Home</a></li>
+        <li><a href="shop.html" class="link">Shop</a></li>
+        <li><a href="blog.html" class="link">Blog</a></li>
+        <li><a href="about.html" class="link">About</a></li>
+        <li><a href="contact.html" class="link">Contact</a></li>
 
         <!--Shopping cart-->
         <div class="shopping-cart">
@@ -111,4 +111,7 @@ document.getElementById("header").innerHTML =
     </div>
 
     `;
+
+
+    
 

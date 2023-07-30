@@ -97,6 +97,14 @@ body {
   left: 0;
 }
 
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 80px;
+  height: 45px;
+}
+
 #navbar {
   display: flex;
   justify-content: center;
@@ -344,7 +352,7 @@ body {
 .searchbar form {
   position: absolute;
   left: 150px;
-  top: 27.5px;
+  top: 30px;
   transform: translate(0%, -50%);
   transition: all 1s;
   width: 40px;
@@ -410,7 +418,7 @@ body {
   outline: none;
 }
 
-
+/* mobile */
 
 
 #mobile {
@@ -424,7 +432,8 @@ body {
 
 #hero {
   background-image: url(img/bg.jpg);
-  height: 100vh;
+  background-repeat: no-repeat;
+  height: 90vh;
   width: 100%;
   background-size: cover;
   background-position: top 25% right -125px;
@@ -435,8 +444,14 @@ body {
   flex-direction: column;
 }
 
+#hero h2 {
+  font-size: 50px;
+}
+
 #hero h4 {
-  padding-bottom: 15px;
+  color: #eee;
+  font-size: 100px;
+  margin: 0px 0px -70px 10px;
 }
 
 #hero h1 {
@@ -454,7 +469,6 @@ body {
   color: #088178;
   text-decoration: none;
 }
-
 
 #features {
   display: flex;
