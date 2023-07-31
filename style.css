@@ -628,11 +628,19 @@ body {
   color: #fff;
   font-size: 30px;
   padding: 10px 0;
-
 }
 
 #banner h2 span {
   color: #e93131;
+}
+
+#banner button a {
+  color: #088178;
+  text-decoration: none;
+}
+
+#banner button:hover a {
+  color: #fff;
 }
 
 #sm-banner {
