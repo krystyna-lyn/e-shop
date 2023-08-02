@@ -26,7 +26,7 @@ document.getElementById("header").innerHTML =
           <div class="overlay"></div>
           <div class="top">
             <button id="closeButton">
-              <i class="fas fa-times-circle"></i>
+              <i class="fas fa-times"></i>
             </button>
             <h3>Cart</h3>
           </div>
@@ -51,7 +51,7 @@ document.getElementById("header").innerHTML =
       </div>
     </div>
     <div id="mobile">
-      <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+     
       <i id="bar" class="fas fa-outdent"></i>
     </div>
 
