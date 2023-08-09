@@ -21,6 +21,9 @@
     </section>
 
     <section id="cart" class="section-p1">
+      <div class="btn-delete">
+        <button class="btn deleteAll hidden">Delete All</button>
+      </div>
       <table width="100%" class="table">
         <thead>
           <tr>
@@ -37,8 +40,7 @@
             -->
         </tbody>
       </table>
-
-      <button class="btn deleteAll hidden">Delete All</button>
+      
     </section>
 
     <section id="cart-add" class="section-p1">
@@ -83,56 +85,9 @@
       </div>
     </section>
 
-    <footer class="section-p1">
-      <div class="col">
-        <h4>Contact</h4>
-        <p><strong>Adress: </strong> Bergstraße 4, Berlin</p>
-        <p><strong>Phone: </strong> (+49) 16246578</p>
-        <p><strong>Hours: </strong> 10:00 - 18:00 Mon - Fri</p>
+    <footer id="footer" class="section-p1"></footer>
 
-        <div class="follow">
-          <h4>Follow us</h4>
-          <div class="icon">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-fpinterest-p"></i>
-            <i class="fab fa-youtube"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <h4>About</h4>
-        <a href="#">About us</a>
-        <a href="#">Delivery Information</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Contact us</a>
-      </div>
-      <div class="col">
-        <h4>My Account</h4>
-        <a href="#">Sign us</a>
-        <a href="#">View cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My Order</a>
-        <a href="#">Help</a>
-      </div>
-
-      <div class="col install">
-        <h4>Install App</h4>
-        <p>From App Store or Google Play</p>
-        <div class="row"></div>
-        <p>Secured Payment Gateways</p>
-        <img src="#" alt="" />
-      </div>
-
-      <div class="copyright">
-        <p>@ 2023, Kryslyn - Ecommerce Template</p>
-      </div>
-    </footer>
-
-    <script src="essentials.js"></script>
+    <script src="js/essentials.js"></script>
     <script>
       const parentElement = document.querySelector("#products");
       const cartSumPrice = document.querySelectorAll(".totalPrice");
@@ -175,6 +130,7 @@
           cartSumPrice.forEach((product) => {
             product.innerHTML = "€" + countTheSumPrice();
           });
+          deleteAll.classList.remove("hidden");
         }
       };
 
@@ -197,10 +153,13 @@
               productsInCart.splice(i, 1);
             }
           }
+          if(productsInCart.length <= 0){
+            window.location.href = "index.html";
+          }
           updateShoppingCartHTML();
         }
       });
-      deleteAll.classList.remove("hidden");
+     
       deleteAll.addEventListener("click", () => {
         //remove all product items from the cart, html structure
         //while (parentElement.firstChild) {

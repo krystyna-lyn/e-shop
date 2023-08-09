@@ -1242,6 +1242,15 @@ h2 {
   font-size: 13px;
 }
 
+#cart .btn-delete {
+  margin-bottom: 40px;
+}
+
+#cart button.deleteAll {
+  background-color: #088178;
+  color: #fff;
+}
+
 #cart-add {
   display: flex;
   flex-wrap: wrap;
