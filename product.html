@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
     <section id="header">
       <a href=""><img src="img/logo.png" class="logo" alt="" /></a>
 
@@ -57,9 +56,9 @@
       </div>
 
       <div class="single-details">
-        <h6 id="name"></h6>
+        <h6 id="name">Product</h6>
         <h4>Womans's Fashion T-Shirt</h4>
-        <h2 id="price"></h2>
+        <h2 id="price">€100</h2>
         <select>
           <option>Select size</option>
           <option>XSmall</option>
@@ -222,26 +221,25 @@
     </footer>
 
     <script>
-      const mainImg = document.getElementById('mainImg');
-      const smallImg = document.getElementsByClassName('small-img');
+      const mainImg = document.getElementById("mainImg");
+      const smallImg = document.getElementsByClassName("small-img");
 
       smallImg[0].onclick = function () {
-          mainImg.src = smallImg[0].src;
-      }
+        mainImg.src = smallImg[0].src;
+      };
       smallImg[1].onclick = function () {
-          mainImg.src = smallImg[1].src;
-      }
+        mainImg.src = smallImg[1].src;
+      };
       smallImg[2].onclick = function () {
-          mainImg.src = smallImg[2].src;
-      }
+        mainImg.src = smallImg[2].src;
+      };
       smallImg[3].onclick = function () {
-          mainImg.src = smallImg[3].src;
-      }
+        mainImg.src = smallImg[3].src;
+      };
 
- 
+      
     </script>
-     <script src="js/essentials.js"></script>
-     <script src="js/script.js"></script>
-     
+    <script src="js/essentials.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
