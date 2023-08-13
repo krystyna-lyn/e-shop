@@ -56,9 +56,9 @@
       </div>
 
       <div class="single-details">
-        <h6 id="name">Product</h6>
-        <h4>Womans's Fashion T-Shirt</h4>
-        <h2 id="price">€100</h2>
+        <h2 id="productName"></h2>
+        <p>Womans's Fashion T-Shirt</p>
+        <h2 id="productPrice"></h2>
         <select>
           <option>Select size</option>
           <option>XSmall</option>
@@ -171,54 +171,7 @@
       </div>
     </section>
 
-    <footer class="section-p1">
-      <div class="col">
-        <h4>Contact</h4>
-        <p><strong>Adress: </strong> Bergstraße 4, Berlin</p>
-        <p><strong>Phone: </strong> (+49) 16246578</p>
-        <p><strong>Hours: </strong> 10:00 - 18:00 Mon - Fri</p>
-
-        <div class="follow">
-          <h4>Follow us</h4>
-          <div class="icon">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-fpinterest-p"></i>
-            <i class="fab fa-youtube"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <h4>About</h4>
-        <a href="#">About us</a>
-        <a href="#">Delivery Information</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Contact us</a>
-      </div>
-      <div class="col">
-        <h4>My Account</h4>
-        <a href="#">Sign us</a>
-        <a href="#">View cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My Order</a>
-        <a href="#">Help</a>
-      </div>
-
-      <div class="col install">
-        <h4>Install App</h4>
-        <p>From App Store or Google Play</p>
-        <div class="row"></div>
-        <p>Secured Payment Gateways</p>
-        <img src="#" alt="" />
-      </div>
-
-      <div class="copyright">
-        <p>@ 2023, Kryslyn - Ecommerce Template</p>
-      </div>
-    </footer>
+    <footer class="section-p1" id="footer"></footer>
 
     <script>
       const mainImg = document.getElementById("mainImg");
@@ -237,9 +190,34 @@
         mainImg.src = smallImg[3].src;
       };
 
-      
+      // Function to get the value of a query parameter
+      function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const productId = getQueryParam("id");
+
+        if (productId) {
+          const product = tshirts.find((item) => item.id === productId);
+
+          if (product) {
+            // Populate product details on the page
+            const productImage = document.getElementById("mainImg");
+            const productName = document.getElementById("productName");
+            const productPrice = document.getElementById("productPrice");
+
+            productImage.src = product.image;
+            productName.textContent = product.productName;
+            productPrice.textContent = "€" + product.productPrice;
+          }
+        }
+      });
     </script>
-    <script src="js/essentials.js"></script>
+
+    <script type="module" src="js/essentials.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+import { tshirts } from './data.js';
+
 //include header
 
 document.getElementById("header").innerHTML =
@@ -45,7 +47,7 @@ document.getElementById("header").innerHTML =
 
       <div class="searchbar">
         <form action="#">
-          <input type="search" placeholder="Search product" />
+          <input type="search" placeholder="Search product"/>
           <i class="fa fa-search" id="search-icon"></i>
           <div class="search_result">
            <a href="product.html" class="card">
@@ -69,8 +71,7 @@ document.getElementById("header").innerHTML =
 
     `;
 
-document.getElementById("footer").innerHTML =
-  `
+document.getElementById("footer").innerHTML = `
     <div class="col">
       <h4>Contact</h4>
       <p><strong>Adress: </strong> Bergstraße 4, Berlin</p>
@@ -123,6 +124,80 @@ document.getElementById("footer").innerHTML =
     </div>
 
     `;
+
+
+//searchbar
+
+let search_result = document.getElementsByClassName("search_result")[0];
+
+tshirts.forEach((element) => {
+
+  const { id, productName, image, productPrice } = element;
+
+  let card = document.createElement("a");
+  card.classList.add("card");
+  card.href = "product.html?id=" + id;
+
+  card.innerHTML = `
+        <img src="${image}" class="img_search" alt="">
+        <div class="content">${productName}
+            <div class="price">${productPrice}
+            </div>
+        </div>
+                    `;
+
+  search_result.appendChild(card);
+});
+
+let input = document.getElementsByTagName("input")[0];
+
+input.addEventListener("keyup", () => {
+  let input_value = input.value.toLocaleLowerCase();
+  let items = search_result.getElementsByTagName("a");
+
+  for (let index = 0; index < items.length; index++) {
+    let as = items[index].getElementsByClassName("content")[0];
+
+    let text_value = as.textContent || as.innerHTML;
+
+    let div = document.getElementById(`${index + 1}`);
+    console.log(div)
+
+    if (text_value.toLocaleLowerCase().indexOf(input_value) > -1) {
+      items[index].style.display = "flex";
+    } else {
+      items[index].style.display = "none";
+    }
+
+    if (input.value == 0) {
+      search_result.style.display = "none";
+
+    } else {
+      search_result.style.display = "";
+
+    }
+  }
+});
+
+function toggleSearchResultsVisibility() {
+  search_result.style.display = "none";
+}
+
+input.addEventListener("mouseenter", () => {
+  search_result.style.display = "block";
+});
+
+search_result.addEventListener("mouseenter", () => {
+  search_result.style.display = "block";
+});
+
+search_result.addEventListener("mouseleave", () => {
+  // Only hide the search results if the input is not focused
+  if (!input.matches(":focus")) {
+    search_result.style.display = "none";
+  }
+});
+
 
 
 
