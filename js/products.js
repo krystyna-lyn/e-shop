@@ -1,4 +1,3 @@
-
 // show products
 let container = document.getElementsByClassName("pro-container")[0];
 
