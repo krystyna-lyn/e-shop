@@ -1,7 +1,7 @@
 //include header
 
 document.getElementById("header").innerHTML =
-	`
+  `
     <a href="index.html"><img src="img/logo.png" class="logo" alt=logo"" /></a>
 
     <div>
@@ -47,9 +47,21 @@ document.getElementById("header").innerHTML =
         <form action="#">
           <input type="search" placeholder="Search product" />
           <i class="fa fa-search" id="search-icon"></i>
+          <div class="search_result">
+           <a href="product.html" class="card">
+                        <img src="#" class="img_search" alt="">
+                        <div class="content">
+                            
+                            <div class="subtitle">
+                                
+                            </div>
+                        </div>
+                    </a>  
+          </div>
         </form>
       </div>
     </div>
+
     <div id="mobile">
      
       <i id="bar" class="fas fa-outdent"></i>
@@ -57,8 +69,8 @@ document.getElementById("header").innerHTML =
 
     `;
 
-    document.getElementById("footer").innerHTML =
-	`
+document.getElementById("footer").innerHTML =
+  `
     <div class="col">
       <h4>Contact</h4>
       <p><strong>Adress: </strong> Bergstraße 4, Berlin</p>
@@ -113,5 +125,5 @@ document.getElementById("header").innerHTML =
     `;
 
 
-    
+
 

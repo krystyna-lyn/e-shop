@@ -104,6 +104,46 @@ body {
   width: 100px;
   height: 25px;
 }
+/*searchbar*/
+
+.searchbar .card .img_search {
+  width: 35px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.searchbar .search_result{
+  margin-top: 60px;
+}
+
+.searchbar .search_result .card {
+  min-width: 100%;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(184, 184, 184, 0.1);
+  margin-bottom: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: none;
+}
+
+.searchbar .search_result .card .content {
+  width: 80%;
+  height: 100%;
+  color: #000;
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.border {
+  -webkit-box-shadow: 0px 3px 24px 3px #36ec9e;
+  border: 1px solid #36ec9e;
+  box-shadow: 0px 3px 20px 5px #36ec9e;
+}
 
 #navbar {
   display: flex;
