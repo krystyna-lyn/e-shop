@@ -189,8 +189,7 @@ tshirts.forEach((element) => {
   card.innerHTML = `
         <img src="${image}" class="img_search" alt="">
         <div class="content">${productName}
-            <div class="price">${productPrice}
-            </div>
+            <div class="price">€${productPrice}</div>
         </div>
                     `;
 
