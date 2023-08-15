@@ -79,7 +79,6 @@ document.getElementById("header").innerHTML =
             <button id="closeButton">
               <i class="fas fa-times"></i>
             </button>
-            <h3>Cart</h3>
           </div>
           <ul id="buyItems">
             <h4 class="empty">Your shopping cart is empty</h4>
