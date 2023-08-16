@@ -104,6 +104,7 @@ body {
   width: 100px;
   height: 25px;
 }
+
 /*searchbar*/
 
 .searchbar .card .img_search {
@@ -113,7 +114,7 @@ body {
   margin-left: 10px;
 }
 
-.searchbar .search_result{
+.searchbar .search_result {
   margin-top: 60px;
 }
 
@@ -1210,6 +1211,9 @@ h2 {
   border-collapse: collapse;
   table-layout: fixed;
   white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 #cart img {
@@ -1227,16 +1231,12 @@ h2 {
   text-align: center;
 }
 
-#cart table td:nth-child(2) {
-  width: 150px;
-  text-align: center;
-}
-
 #cart table td:nth-child(3) {
   width: 250px;
   text-align: center;
 }
 
+#cart table td:nth-child(2),
 #cart table td:nth-child(4),
 #cart table td:nth-child(5),
 #cart table td:nth-child(6) {
@@ -1365,14 +1365,14 @@ h2 {
   #navbar {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     top: 0;
     right: -300px;
     height: 65vh;
     width: 300px;
-    background-color: #e1e1e1;
+    background-color: #000;
     box-sizing: 0 40px 60px rgba(0, 0, 0, 0.1);
     padding: 80px 0 0 10px;
     animation: 1s fade;
@@ -1385,6 +1385,10 @@ h2 {
 
   #navbar li {
     margin-bottom: 25px;
+  }
+
+  #navbar li a {
+    color: #fff;
   }
 
   #mobile {
@@ -1404,8 +1408,13 @@ h2 {
     position: absolute;
     top: 30px;
     left: 30px;
-    color: #222;
+    color: #fff;
     font-size: 24px;
+  }
+
+  .shopping-cart {
+    color: #fff;
+    margin: 25px 20px;
   }
 
   .searchbar form {
@@ -1496,6 +1505,10 @@ h2 {
 
   .section-p1 {
     padding: 20px;
+  }
+
+  p {
+    font-size: 12px;
   }
 
   #header {
@@ -1610,7 +1623,7 @@ h2 {
   #product-details .single-details h6,
   h4,
   h2 {
-    padding: 20px 0 20px 0;
+    padding: 20px 0 0px 0;
   }
 
   /* Blog page */
@@ -1648,6 +1661,12 @@ h2 {
     width: 100%;
   }
 
+  #about-head h2,
+  #app h2 {
+    font-size: 30px;
+  }
+
+
   /* Contact page */
 
   #contact {
@@ -1656,6 +1675,11 @@ h2 {
 
   #contact .details {
     width: 100%;
+  }
+
+  #contact .details h2 {
+    font-size: 17px;
+    line-height: 25px;
   }
 
   #contact .map {
@@ -1674,7 +1698,59 @@ h2 {
     margin-bottom: 30px;
   }
 
+  #form form h2 {
+    font-size: 20px;
+  }
+
   /* Cart Page */
+
+  #cart table {
+    border: 0;
+  }
+
+  #cart table thead {
+    display: none;
+  }
+
+  #cart table tr {
+    background-color: #f8f8f8;
+    border-bottom: 0.5px solid #ddd;
+    display: block;
+    margin-bottom: 2em;
+  }
+
+  #cart table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+    border: none;
+  }
+
+  #cart table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  #cart table td:last-child {
+    border-bottom: 0;
+  }
+
+  #cart table td:nth-child(1),
+  #cart table td:nth-child(2),
+  #cart table td:nth-child(3),
+  #cart table td:nth-child(4),
+  #cart table td:nth-child(5) {
+    width: 100%;
+    text-align: end;
+  }
+
 
   #cart-add {
     flex-direction: column;

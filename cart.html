@@ -27,7 +27,7 @@
       <table width="100%" class="table">
         <thead>
           <tr>
-            <td>Image</td>
+            <td></td>
             <td>Product</td>
             <td>Price</td>
             <td>Quantity</td>
@@ -40,7 +40,6 @@
             -->
         </tbody>
       </table>
-      
     </section>
 
     <section id="cart-add" class="section-p1">
@@ -114,14 +113,14 @@
             return `
                 <tr>
                 <td><img src="${product.image}" alt=""/></td>
-                <td>${product.name}</td>
-                <td>${product.basePrice}</td>
-                <td>
+                <td data-label="Product">${product.name}</td>
+                <td data-label="Price">€${product.basePrice}</td>
+                <td data-label="Quantity">
                   <button class="button-minus" data-id="${product.id}">-</button>
                   <span class="countOfProduct">${product.count}</span>
                   <button class="button-plus" data-id="${product.id}">+</button>
                 </td>
-                <td>${product.price}</td>
+                <td data-label="Subtotal">€${product.price}</td>
                 </tr>`;
           });
 
@@ -153,13 +152,13 @@
               productsInCart.splice(i, 1);
             }
           }
-          if(productsInCart.length <= 0){
+          if (productsInCart.length <= 0) {
             window.location.href = "index.html";
           }
           updateShoppingCartHTML();
         }
       });
-     
+
       deleteAll.addEventListener("click", () => {
         //remove all product items from the cart, html structure
         //while (parentElement.firstChild) {
