@@ -87,10 +87,31 @@
     <footer id="footer" class="section-p1"></footer>
 
     <script src="js/essentials.js"></script>
+
     <script>
       const parentElement = document.querySelector("#products");
       const cartSumPrice = document.querySelectorAll(".totalPrice");
       const deleteAll = document.querySelector(".deleteAll");
+
+      const bar = document.getElementById("bar");
+      const nav = document.getElementById("navbar");
+      const close = document.getElementById("close");
+
+      // toggle navbar
+
+      if (bar) {
+        bar.addEventListener("click", () => {
+          nav.classList.add("active");
+        });
+      }
+
+      if (close) {
+        close.addEventListener("click", () => {
+          nav.classList.remove("active");
+        });
+      }
+
+      // show products from shopping cart
 
       const countTheSumPrice = function () {
         let sumPrice = 0;
