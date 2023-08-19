@@ -63,7 +63,10 @@ document.getElementById("header").innerHTML =
         <li><a href="about.html" class="link">About</a></li>
         <li><a href="contact.html" class="link">Contact</a></li>
 
-        <!--Shopping cart-->
+        <a href="#" id="close"><i class="far fa-times"></i></a>
+      </ul>
+
+      <!--Shopping cart-->
         <div class="shopping-cart">
           <div class="sum-prices">
             <!--Shopping cart logo-->
@@ -88,8 +91,7 @@ document.getElementById("header").innerHTML =
           </button>
         </div>
 
-        <a href="#" id="close"><i class="far fa-times"></i></a>
-      </ul>
+       
 
       <!-- searchbar -->
 
