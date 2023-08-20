@@ -185,7 +185,9 @@ body {
 /*shopping-cart*/
 
 .shopping-cart {
-  margin-left: 25px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .shopping-cart .sum-prices {
@@ -770,7 +772,7 @@ body {
   justify-content: space-between;
   background-repeat: no-repeat;
   min-width: 30%;
-  height: 30vh;
+  height: 40vh;
   background-position: 20% 30%;
   background-color: #282929;
   ;
@@ -1371,11 +1373,10 @@ h2 {
     position: fixed;
     top: 0;
     right: -300px;
-    height: 65vh;
+    height: 60vh;
     width: 300px;
     background-color: #000;
     box-sizing: 0 40px 60px rgba(0, 0, 0, 0.1);
-    padding: 80px 0 0 10px;
     animation: 1s fade;
     transition: 0.3s;
   }
@@ -1415,7 +1416,8 @@ h2 {
 
   .shopping-cart {
     color: #000000;
-    margin-left: 200px;
+    right: 120px;
+    top: 25px;
   }
 
   .searchbar form {
@@ -1521,6 +1523,11 @@ h2 {
     left: 20px;
   }
 
+  .shopping-cart {
+    right: 70px;
+    top: 15px;
+  }
+
   #hero {
     padding: 0 20px;
     background-position: 55%;
@@ -1594,7 +1601,7 @@ h2 {
 
   #newsletter {
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 30px 20px;
   }
 
   #newsletter .form {
