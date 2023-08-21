@@ -75,6 +75,7 @@ document.getElementById("header").innerHTML =
             <h6 id="sum-prices"></h6>
           </div>
         </div>
+        
 
         <div class="producstOnCart hide">
           <div class="overlay"></div>
