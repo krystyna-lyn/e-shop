@@ -54,8 +54,9 @@ const tshirts = [
 document.getElementById("header").innerHTML =
   `
     <a href="index.html"><img src="img/logo.png" class="logo" alt=logo"" /></a>
-
+    
     <div>
+   
       <ul id="navbar">
         <li><a href="index.html" class="link">Home</a></li>
         <li><a href="shop.html" class="link">Shop</a></li>
@@ -64,6 +65,7 @@ document.getElementById("header").innerHTML =
         <li><a href="contact.html" class="link">Contact</a></li>
 
         <a href="#" id="close"><i class="far fa-times"></i></a>
+       
       </ul>
 
       <!--Shopping cart-->
