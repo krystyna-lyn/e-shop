@@ -47,7 +47,8 @@
           <option>Large</option>
         </select>
         <input type="number" value="1" />
-        <button class="btn">Add to Cart</button>
+        <button  class="btn addToCart" data-product-id="">Add to Cart</button>
+       
         <h4>Product Details</h4>
         <span
           >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
@@ -68,6 +69,10 @@
       <div class="pro-container">
        
       </div>
+
+      <i class="fas fa-shopping-cart cart addToCart" id="addButton"
+      data-product-id=""></i>
+      
     </section>
 
     <section id="newsletter" class="section-p1 section-m1">
@@ -111,6 +116,7 @@
 
       document.addEventListener("DOMContentLoaded", () => {
         const productId = getQueryParam("id");
+        
 
         if (productId) {
           const product = tshirts.find((item) => item.id === productId);
@@ -120,10 +126,14 @@
             const productImage = document.getElementById("mainImg");
             const productName = document.getElementById("productName");
             const productPrice = document.getElementById("productPrice");
+            const addButton = document.getElementById("addButton");
+           
 
             productImage.src = product.image;
             productName.textContent = product.productName;
             productPrice.textContent = "€" + product.productPrice;
+            addButton.dataset.productId = productId;
+            
           }
         }
       });

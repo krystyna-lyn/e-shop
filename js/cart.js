@@ -69,7 +69,7 @@ products.forEach(item => {   // 1
             const productName = item.querySelector('.productName').innerHTML;
             const productPrice = item.querySelector('.priceValue').innerHTML;
             const productImage = item.querySelector('img').src;
-            console.log(productImage)
+            
             let product = {
                 name: productName,
                 image: productImage,
