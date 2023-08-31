@@ -35,7 +35,7 @@
         </div>
       </div>
 
-      <div class="single-details">
+      <div class="single-details" id="pDetails">
         <h2 id="productName"></h2>
         <p>Womans's Fashion T-Shirt</p>
         <h2 id="productPrice"></h2>
@@ -47,7 +47,7 @@
           <option>Large</option>
         </select>
         <input type="number" value="1" />
-        <button  class="btn addToCart" data-product-id="">Add to Cart</button>
+        <button  class="btn" data-product-id="">Add to Cart</button>
        
         <h4>Product Details</h4>
         <span
@@ -126,13 +126,13 @@
             const productImage = document.getElementById("mainImg");
             const productName = document.getElementById("productName");
             const productPrice = document.getElementById("productPrice");
-            const addButton = document.getElementById("addButton");
+            
            
 
             productImage.src = product.image;
             productName.textContent = product.productName;
             productPrice.textContent = "€" + product.productPrice;
-            addButton.dataset.productId = productId;
+            
             
           }
         }

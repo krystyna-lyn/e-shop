@@ -1,5 +1,6 @@
 // show products
 let container = document.getElementsByClassName("pro-container")[0];
+let pDetails = document.getElementById("pDetails");
 
 tshirts.forEach((element) => {
     const { id, productName, image, productPrice } = element;
@@ -26,6 +27,34 @@ tshirts.forEach((element) => {
         data-product-id="${id}"></i>
         </div>
     `;
+
     container.appendChild(div);
 });
 
+pDetails.innerHTML= `
+
+<h2 id="${productName}"></h2>
+<p>Womans's Fashion T-Shirt</p>
+<h2 id="productPrice">${productPrice}</h2>
+<select>
+  <option>Select size</option>
+  <option>XSmall</option>
+  <option>Small</option>
+  <option>Medium</option>
+  <option>Large</option>
+</select>
+<input type="number" value="${id}" />
+<button  class="btn" data-product-id="">Add to Cart</button>
+
+<h4>Product Details</h4>
+<span
+  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+  cumque impedit fugiat voluptates facilis dicta ut incidunt aspernatur
+  Voluptas libero deserunt doloribus voluptatem eum eius quae obcaecati
+  cupiditate vel similique Lorem ipsum dolor sit amet consectetur
+  adipisicing elit. Aliquid cumque impedit fugiat voluptates facilis
+  dicta ut incidunt aspernatur Voluptas libero deserunt doloribus
+  voluptatem eum eius quae obcaecati cupiditate vel similique
+</span>
+
+`;
