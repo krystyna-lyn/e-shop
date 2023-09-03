@@ -51,14 +51,7 @@
         <button  class="btn" data-product-id="">Add to Cart</button>
        
         <h4>Product Details</h4>
-        <span
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-          cumque impedit fugiat voluptates facilis dicta ut incidunt aspernatur
-          Voluptas libero deserunt doloribus voluptatem eum eius quae obcaecati
-          cupiditate vel similique Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Aliquid cumque impedit fugiat voluptates facilis
-          dicta ut incidunt aspernatur Voluptas libero deserunt doloribus
-          voluptatem eum eius quae obcaecati cupiditate vel similique
+        <span id="pDescription">
         </span>
       </div>
     </section>
@@ -70,9 +63,6 @@
       <div class="pro-container">
        
       </div>
-
-      <i class="fas fa-shopping-cart cart addToCart" id="addButton"
-      data-product-id=""></i>
       
     </section>
 
@@ -127,19 +117,22 @@
             const productImage = document.getElementById("mainImg");
             const productName = document.getElementById("productName");
             const productPrice = document.getElementById("productPrice");
+            const description = document.getElementById("pDescription");
             
            
 
             productImage.src = product.image;
             productName.textContent = product.productName;
             productPrice.textContent = "€" + product.productPrice;
+            description.textContent = product.description;
+            console.log(product.description)
             
             
           }
         }
       });
     </script>
-
+ <script src="js/data.js"></script>
     <script src="js/essentials.js"></script>
     <script src="js/products.js"></script>
     <script src="js/script.js"></script>

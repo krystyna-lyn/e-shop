@@ -3,7 +3,9 @@ let container = document.getElementsByClassName("pro-container")[0];
 
 
 tshirts.forEach((element) => {
-    const { id, productName, image, productPrice } = element;
+    const { id, productName, image, productPrice, description} = element;
+
+    console.log(element)
 
     let div = document.createElement("div");
     div.classList.add("pro");
