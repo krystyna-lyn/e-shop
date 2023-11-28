@@ -88,7 +88,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 80px;
+  padding: 20px 200px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   background-color: #fff;
   z-index: 999;
@@ -186,7 +186,7 @@ body {
 
 .shopping-cart {
   position: absolute;
-  right: 20px;
+  right: 120px;
   top: 20px;
 }
 
