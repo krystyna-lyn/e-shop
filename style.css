@@ -481,7 +481,7 @@ body {
 }
 
 #hero h2 {
-  font-size: 50px;
+  font-size: 86px;
 }
 
 #hero h4 {
@@ -491,6 +491,7 @@ body {
 }
 
 #hero h1 {
+  margin-top: 40px;
   color: #088178;
 }
 
@@ -1537,19 +1538,17 @@ h2 {
   }
 
   #hero h1 {
-    font-size: 40px;
-
+    font-size: 30px;
   }
 
   #hero h2 {
-    font-size: 32px;
+    font-size: 26px;
   }
 
   #hero p {
     font-size: 15px;
     color: #465b52;
     margin: 15px 0 20px 0;
-    background-color: #fbcd12df;
     padding: 10px;
   }
 
