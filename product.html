@@ -36,23 +36,33 @@
       </div>
 
       <div class="single-details">
-
+        <p class="product-category">Women's Fashion T-Shirt</p>
         <h2 id="productName"></h2>
-        <p>Womans's Fashion T-Shirt</p>
-        <h2 id="productPrice"></h2>
-        <select>
-          <option>Select size</option>
-          <option>XSmall</option>
-          <option>Small</option>
-          <option>Medium</option>
-          <option>Large</option>
-        </select>
-        <input type="number" value="1" />
-        <button  class="btn" data-product-id="">Add to Cart</button>
-       
+        <p class="product-price" id="productPrice"></p>
+
+        <div class="product-options">
+          <label for="productSize">Size</label>
+          <select id="productSize">
+            <option>Select size</option>
+            <option>XSmall</option>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+        </div>
+
+        <div class="product-actions">
+          <div class="qty-control">
+            <label for="productQty">Quantity</label>
+            <input type="number" id="productQty" value="1" min="1" max="99" />
+          </div>
+          <button class="btn addToCartDetail" id="addToCartBtn" type="button">
+            Add to Cart
+          </button>
+        </div>
+
         <h4>Product Details</h4>
-        <span id="pDescription">
-        </span>
+        <span id="pDescription"></span>
       </div>
     </section>
 
@@ -82,6 +92,7 @@
 
     <footer class="section-p1" id="footer"></footer>
 
+    <script src="js/data.js"></script>
     <script>
       const mainImg = document.getElementById("mainImg");
       const smallImg = document.getElementsByClassName("small-img");
@@ -99,7 +110,6 @@
         mainImg.src = smallImg[3].src;
       };
 
-      // Function to get the value of a query parameter
       function getQueryParam(name) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(name);
@@ -107,32 +117,27 @@
 
       document.addEventListener("DOMContentLoaded", () => {
         const productId = getQueryParam("id");
-        
+        const addBtn = document.getElementById("addToCartBtn");
 
         if (productId) {
-          const product = tshirts.find((item) => item.id === productId);
+          const product = tshirts.find((item) => item.id == productId);
 
           if (product) {
-            // Populate product details on the page
-            const productImage = document.getElementById("mainImg");
-            const productName = document.getElementById("productName");
-            const productPrice = document.getElementById("productPrice");
-            const description = document.getElementById("pDescription");
-            
-           
+            document.getElementById("mainImg").src = product.image;
+            document.getElementById("productName").textContent = product.productName;
+            document.getElementById("productPrice").textContent = "€" + product.productPrice;
+            document.getElementById("pDescription").textContent = product.description;
 
-            productImage.src = product.image;
-            productName.textContent = product.productName;
-            productPrice.textContent = "€" + product.productPrice;
-            description.textContent = product.description;
-            console.log(product.description)
-            
-            
+            if (addBtn) {
+              addBtn.dataset.productId = product.id;
+              addBtn.dataset.productName = product.productName;
+              addBtn.dataset.productPrice = product.productPrice;
+              addBtn.dataset.productImage = product.image;
+            }
           }
         }
       });
     </script>
-    <script src="js/data.js"></script>
     <script src="js/essentials.js"></script>
     <script src="js/products.js"></script>
     <script src="js/script.js"></script>
