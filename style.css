@@ -951,6 +951,10 @@ button.btn-banner:hover {
   margin-bottom: var(--space-lg);
 }
 
+#product1 .pro .star i.fas.fa-star {
+  color: var(--color-primary);
+}
+
 #product1 .pro .des {
   text-align: start;
   padding: 0;
@@ -960,7 +964,7 @@ button.btn-banner:hover {
 }
 
 #product1 .pro .des span {
-  color: var(--color-text-light);
+  color: var(--color-primary);
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
